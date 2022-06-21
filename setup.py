@@ -1,12 +1,12 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from typing import List
 
 ## Decalring variables for setup function
 PROJECT_NAME = "hosuing-predictor"
-VERSION = "0.0.1"
+VERSION = "0.0.3"
 AUTHOR = "Amit Kumar Singh" 
 DESCRIPTION = "This is a first FSDS Nov batch Machine Learning Project"
-PACKAGES = ["housing"] #it could be a list of folders name, here we have only one
+#PACKAGES = ["housing"] #it could be a list of folders name, here we have only one
 REQUIREMENT_FILE_NAME = "requirements.txt"
 
 def get_requirements_list()->List[str]:
@@ -17,7 +17,7 @@ def get_requirements_list()->List[str]:
     in requirements.txt file 
     """
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines()
+        return requirement_file.readlines().remove("-e .")
 
 
 setup(
@@ -25,7 +25,6 @@ name = PROJECT_NAME,
 version = VERSION,
 author  = AUTHOR,
 description = DESCRIPTION,
-packages = PACKAGES,
-install_requires = get_requirements_list()
+packages = find_packages(), #PACKAGES : #find_packages() returns all the folder name where __init__ is there
+install_requires = get_requirements_list() #External libraries required to run and function will return those one by one as a list
 )
-

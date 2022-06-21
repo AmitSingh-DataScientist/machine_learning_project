@@ -75,3 +75,9 @@ To Run all the commands at one place, do not need to run any other file
 ```
 python setup.py install
 ```
+
+To install all dependencies within __init__ file under housing folder
+```
+pip install -e .
+```
+.py file is called as Module whereas folder that contains __init__ module file  is called Package
