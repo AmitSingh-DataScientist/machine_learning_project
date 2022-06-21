@@ -70,3 +70,8 @@ To stop docker conatiner
 ```
 docker stop <container_id>
 ```
+
+To Run all the commands at one place, do not need to run any other file
+```
+python setup.py install
+```
