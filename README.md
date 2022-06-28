@@ -81,3 +81,10 @@ To install all dependencies within __init__ file under housing folder
 pip install -e .
 ```
 .py file is called as Module whereas folder that contains __init__ module file  is called Package
+
+setup.py file is created for Build & Distribute purpose - Build the solution and distribute to others
+
+install ipykernel
+```
+pip install ipykernel
+```
