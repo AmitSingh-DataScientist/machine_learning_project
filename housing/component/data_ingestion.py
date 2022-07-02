@@ -1,8 +1,3 @@
-from curses import raw
-import tarfile
-
-from numpy.lib.shape_base import split
-from sklearn.utils import axis0_safe_slice
 from housing.entity.config_entity import DataIngestionConfig
 import sys,os
 from housing.exception import HousingException

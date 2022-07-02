@@ -1,5 +1,3 @@
-from cmath import e
-from boto import config
 from sklearn.pipeline import Pipeline
 from housing.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig, \
     ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
