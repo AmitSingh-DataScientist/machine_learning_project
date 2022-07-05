@@ -88,3 +88,5 @@ install ipykernel
 ```
 pip install ipykernel
 ```
+Data Drift:
+When your dataset stats gets change we call it as data drifts. We actually try to compare stats or graph of one dataset with other if there isn't any major chnage we say no data drift, if there is drastical changes then we say there is Data Drift.
