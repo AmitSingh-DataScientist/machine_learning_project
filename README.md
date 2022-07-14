@@ -90,3 +90,11 @@ pip install ipykernel
 ```
 Data Drift:
 When your dataset stats gets change we call it as data drifts. We actually try to compare stats or graph of one dataset with other if there isn't any major chnage we say no data drift, if there is drastical changes then we say there is Data Drift.
+
+Why do we use Standard Scaling?
+Ans : To bring data in the same scale
+
+pickle : pickle is all about serialization- we save an object within a file
+
+
+## Write a function to get training file path from artifact dir
