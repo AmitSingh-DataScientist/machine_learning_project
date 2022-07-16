@@ -11,7 +11,6 @@ model_selection:
     module: sklearn.linear_model
     params:
       fit_intercept: True
-      
     search_param_grid:
       fit_intercept:
       - True
@@ -21,15 +20,22 @@ model_selection:
     class: RandomForestRegressor
     module: sklearn.ensemble
     params:
-      n_estimators: 40
       min_samples_leaf: 2
     search_param_grid:
       min_samples_leaf:
+      - 4
+      - 6
+      - 12
+      n_estimators:
+      - 100
+      - 200
+      bootstrap:
+      - True
+      - False
+      oob_score:
+      - True
+      - False
+      max_depth:
       - 2
       - 4
       - 6
-      n_estimators:
-      - 50
-      - 100
-      - 80
-

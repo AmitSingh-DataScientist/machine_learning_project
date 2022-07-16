@@ -8,7 +8,9 @@ def main():
     try :
 
         pipeline = Pipeline()
-        pipeline.run_pipeline()
+        # pipeline.run_pipeline()
+        pipeline.start()
+        logging.info("main function execution completed  ")
         ## for data validation
         # data_validation_config = Configuration().get_data_ingestion_config()
         # print(data_validation_config)
