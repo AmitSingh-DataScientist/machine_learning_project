@@ -11,6 +11,7 @@ from collections import namedtuple
 from typing import List
 from housing.logger import logging
 from sklearn.metrics import r2_score,mean_squared_error
+
 GRID_SEARCH_KEY = 'grid_search'
 MODULE_KEY = 'module'
 CLASS_KEY = 'class'
@@ -283,6 +284,7 @@ class ModelFactory:
         except Exception as e:
             raise HousingException(e, sys) from e
 
+    ## to initialized only one model
     def initiate_best_parameter_search_for_initialized_model(self, initialized_model: InitializedModelDetail,
                                                              input_feature,
                                                              output_feature) -> GridSearchedBestModel:
@@ -303,6 +305,7 @@ class ModelFactory:
         except Exception as e:
             raise HousingException(e, sys) from e
 
+    ## to initialized more than one model
     def initiate_best_parameter_search_for_initialized_models(self,
                                                               initialized_model_list: List[InitializedModelDetail],
                                                               input_feature,
