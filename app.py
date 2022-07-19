@@ -1,18 +1,18 @@
 from flask import Flask, request
-import os, sys
 import pip
-from housing.logger import logging
-from housing.exception import HousingException
 from housing.util.util import read_yaml_file, write_yaml_file
 from matplotlib.style import context
+from housing.logger import logging
+from housing.exception import HousingException
+import os, sys
 import json
-from housing.config.configuration import Configuaration
+from housing.config.configuration import Configuration
 from housing.constant import CONFIG_DIR, get_current_time_stamp
 from housing.pipeline.pipeline import Pipeline
-from flask import send_file, abort, render_template
 from housing.entity.housing_predictor import HousingPredictor, HousingData
+from flask import send_file, abort, render_template
 
-## initialization for Flask App
+## Initialization of Flask App
 ROOT_DIR = os.getcwd()
 LOG_FOLDER_NAME = "logs"
 PIPELINE_FOLDER_NAME = "housing"
@@ -28,8 +28,7 @@ from housing.logger import get_log_dataframe
 HOUSING_DATA_KEY = "housing_data"
 MEDIAN_HOUSING_VALUE_KEY = "median_house_value"
 
-
-app=Flask(__name__)
+app = Flask(__name__)
 
 # app=Flask(__name__)
 # @app.route("/",methods=['GET','POST'])
@@ -96,7 +95,7 @@ def view_experiment_history():
 @app.route('/train', methods=['GET', 'POST'])
 def train():
     message = ""
-    pipeline = Pipeline(config=Configuaration(current_time_stamp=get_current_time_stamp()))
+    pipeline = Pipeline(config=Configuration(current_time_stamp=get_current_time_stamp()))
     if not Pipeline.experiment.running_status:
         message = "Training started."
         pipeline.start()
@@ -223,5 +222,5 @@ def render_log_dir(req_path):
     return render_template('log_files.html', result=result)
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
