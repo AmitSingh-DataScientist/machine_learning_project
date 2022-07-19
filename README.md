@@ -1,6 +1,7 @@
-[Application url:](https://ml-app-regression.herokuapp.com)
-
 ## machine_learning_project
+
+[Application url](https://ml-app-regression.herokuapp.com/)
+
 ### This is my first machine learning project
 #### Software and account login requirements:
 
