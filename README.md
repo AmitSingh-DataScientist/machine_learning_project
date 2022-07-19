@@ -1,4 +1,4 @@
-[Application url: ](https://ml-app-regression.herokuapp.com/)
+[Application url:](https://ml-app-regression.herokuapp.com)
 
 ## machine_learning_project
 ### This is my first machine learning project
